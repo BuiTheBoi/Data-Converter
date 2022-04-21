@@ -19,3 +19,21 @@ To install g++ on Linux Shell:
 sudo apt-get update
 sudo apt-get install g++
 ```
+
+## Contribution Guidelines
+
+### Coding Standards:
+
+Before you contribute to this repository, please consider these following coding standards:
+Coding Standards: http://web.mit.edu/6.s096/www/standards.html
+
+### How to Run/Test Repo
+
+You can run this program by typing in sh `r.sh` on your terminal. This shell script is responsible for compiling
+and running your program.
+
+### Reporting Bugs
+
+### Contributing to Issues
+
+### Workflow to Evaluate Pull Requests
