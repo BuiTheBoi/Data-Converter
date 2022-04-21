@@ -88,3 +88,8 @@ string decimalToBase(int base, int num)
 
     return result;
 }
+
+string baseToBase(int input_base, string input_str, int output_base)
+{
+    return decimalToBase(output_base, baseToDecimal(input_base, input_str));
+}

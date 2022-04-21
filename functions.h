@@ -19,6 +19,7 @@ int baseToDecimal(int base, string num);
 // and hex).
 string decimalToBase(int base, int num);
 
-// bin/hex = decimalToBase(19, baseToDecimal(2, "10101001"))
+// Converts binary, hexadecimal, octal to another binary, hexadecimal, octal
+string baseToBase(int input_base, string input_str, int output_base);
 
 #endif

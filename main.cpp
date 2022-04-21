@@ -1,6 +1,9 @@
+// To compile: g++ -std=c++17 main.cpp functions.cpp
+// To run: ./a.out
+
 // Base to decimal
 // Decimal to base
-
+// Base to base
 
 #include <iostream>
 #include <string>
@@ -65,12 +68,12 @@ int main()
         cout << "Please pick what output type you want to convert your input to: ";
         cin >> output_choice;
 
-        cout << "Base " << my_dictionary[input_choice] << " converted to " << my_dictionary[output_choice] << ": ";
+        cout << "Base " << my_dictionary[input_choice] << " converted to base " << my_dictionary[output_choice] << ": ";
         if (input_choice == output_choice)
         {
             // Case: If user wants input type to be the same as output type,
             /// no processing is needed! We can just output the result
-            cout << (input_choice == 1) ? to_string(decimal) : base_str;
+            cout << (input_choice == 1 ? to_string(decimal) : base_str);
             cout << endl;
         }
         else if(input_choice == 1)
@@ -81,22 +84,27 @@ int main()
         }
         else
         {
-            // Case: Input is a STRING (When user picks another base instead of decimal), and we wnat to convert this
-            // string (bin, oct, hex) into a decimal. We will therefore use baseToDecimal()
-            cout << baseToDecimal(my_dictionary[input_choice], base_str) << endl;
-
-
-            // Case: Input is a STRING (When user picks another base instead of decimal), BUT this time we want to 
-            // convert this to another STRING of another base (Ex: hex -> octal, octal -> bin, bin -> hex, etc....).
-            // We wil therefore use baseToBase()
+            if (output_choice == 1)
+            {
+                // Case: Input is a STRING (When user picks another base instead of decimal), and we wnat to convert this
+                // string (bin, oct, hex) into a decimal. We will therefore use baseToDecimal()
+                cout << baseToDecimal(my_dictionary[input_choice], base_str) << endl;
+            }
+            else
+            {
+                // Case: Input is a STRING (When user picks another base instead of decimal), BUT this time we want to 
+                // convert this to another STRING of another base (Ex: hex -> octal, octal -> bin, bin -> hex, etc....).
+                // We wil therefore use baseToBase()
+                cout << baseToBase(my_dictionary[input_choice], base_str, my_dictionary[output_choice]) << endl;
+            }
         }
 
-        cout << "Do you want to continue this program? (y/n)";
+        cout << "Do you want to continue this program? (y/n) ";
         cin >> continueProgram;
         system("clear");
     }
 
-    cout << "Have a great day!"
+    cout << "Have a great day!" << endl;
     
     return 0;
 }
