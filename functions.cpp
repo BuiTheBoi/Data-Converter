@@ -1,4 +1,5 @@
 #include "functions.h"
+#include <string>
 
 using namespace std;
 
@@ -7,6 +8,20 @@ string convertAllCaps(string val)
     return "string";
 }
 
+bool isHex(string hex)
+{
+    return true;
+}
+
+bool isBinary(string bin)
+{
+    return true;
+}
+
+bool isOctal(string oct)
+{
+    return true;
+}
 
 int baseToDecimal(int base, string num)
 {

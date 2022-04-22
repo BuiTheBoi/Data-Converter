@@ -15,7 +15,6 @@ using namespace std;
 
 int main()
 {
-
     cout << "WELCOME TO THE DATA CONVERTER" << endl;
     cout << "--------------------------------" << endl;
 
