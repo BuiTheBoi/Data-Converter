@@ -11,7 +11,7 @@ Before running the program, you need to install a C++ compiler on your system. T
 ### C++ Compiler Set Up:
 
 Assuming you have your system set up from above, you will need to install a C++ compiler. For this particular project, we will be using the
-g++ compiler.
+g++ compiler. (We will specifically be using C++ 17.)
 
 To install g++ on Linux Shell:
 

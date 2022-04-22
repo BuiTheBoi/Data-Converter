@@ -9,7 +9,7 @@ Before you contribute to this repository, please consider these following coding
 - Variable and function names are to be done in **camel case** (Test case functions I've made are an exception as those names are all caps)
 - Variables and functions must be sensibly named relative to their purpose. Any long pieces of code can be split into functions for ease of reading
 - Functions used by the main program must have their prototypes in `functions.h`. On top of each prototype, functions must have a brief description done by comments. Function definitions are to be done in `functions.cpp`.
-- If you plan to have any major/global variables, please initialize/declare them in `accessories.h`.\
+- If you plan to have any major/global variables, please initialize/declare them in `accessories.h`.
 
 ### Classes and Objects
 
