@@ -1,3 +1,5 @@
+// Any variables used globally throughout files can be used here!
+
 #ifndef ACCESSORIES_H
 #define ACCESSORIES_H
 
