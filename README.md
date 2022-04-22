@@ -1,6 +1,6 @@
-# Data-Converter
+# Data Converter
 
-An interactive C++ menu-driven program that can convert between all of the following numerical-bases: binary (base-2), octal (base-8), decimal (base-10), or hexadecimal (base-16). (**NOTE: This repository is exclusively for CPSC 362 students only for the sole purpose of assignment 3. Until this assignment is due, I will make this repo open for ANYONE to contribute to.**)
+An interactive C++ menu-driven program that can convert between all of the following numerical-bases: binary (base-2), octal (base-8), decimal (base-10), or hexadecimal (base-16). (**NOTE: This repository is exclusively for CPSC 362 students only for the sole purpose of assignment 3. After this assignment is due (May 10, 2022 at 11:59 PM), I will make this repo open for ANYONE to contribute to.**)
 
 ## Set Up Guidlines
 
@@ -19,21 +19,3 @@ To install g++ on Linux Shell:
 sudo apt-get update
 sudo apt-get install g++
 ```
-
-## Contribution Guidelines
-
-### Coding Standards:
-
-Before you contribute to this repository, please consider these following coding standards:
-Coding Standards: http://web.mit.edu/6.s096/www/standards.html
-
-### How to Run/Test Repo
-
-You can run this program by typing in sh `r.sh` on your terminal. This shell script is responsible for compiling
-and running your program.
-
-### Reporting Bugs
-
-### Contributing to Issues
-
-### Workflow to Evaluate Pull Requests
