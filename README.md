@@ -1,6 +1,6 @@
 # Data Converter
 
-An interactive C++ menu-driven program that can convert between all of the following numerical-bases: binary (base-2), octal (base-8), decimal (base-10), or hexadecimal (base-16). (**NOTE: This repository is exclusively for CPSC 362 students only for the sole purpose of assignment 3. After this assignment is due (May 10, 2022 at 11:59 PM), I will make this repo open for ANYONE to contribute to.**)
+An interactive C++ menu-driven program that can convert between all of the following numerical-bases: binary (base-2), octal (base-8), decimal (base-10), or hexadecimal (base-16). Interested in contributing? Refer to the [contribution guideline](https://github.com/BuiTheBoi/Data-Converter/blob/main/CONTRIBUTE.md)! (**NOTE: This repository is exclusively for CPSC 362 students only for the sole purpose of assignment 3. After this assignment is due (May 10, 2022 at 11:59 PM), I will make this repo open for ANYONE to contribute to.**)
 
 ## Set Up Guidlines
 
