@@ -5,21 +5,56 @@ using namespace std;
 
 string convertAllCaps(string val)
 {
-    return "string";
+    int n=val.length();
+    string result;
+    for(int i = 0; i < n; i++)
+    {
+        char ch = val[i];
+        if ((ch > 'a' && ch <'z'))
+        {
+            result += toupper(ch);
+        }
+        else
+        {
+            result += ch;
+        }
+    } 
+    return result;
 }
 
 bool isHex(string hex)
 {
+    int n = hex.length();
+    for(int i = 0; i < n; i++)
+    {
+        char ch = hex[i];
+        if ((ch < '0' || ch > '9') && (ch < 'A' || ch > 'F'))
+        {
+            return false;
+        }
+    } 
     return true;
 }
 
 bool isBinary(string bin)
 {
+    int n = bin.length();
+    for(int i = 0; i < n; i++)
+    {
+        char ch = bin[i];
+        if (ch != 0 || ch != 1) return false;
+    }
     return true;
 }
 
 bool isOctal(string oct)
 {
+    int n = oct.length();
+    for(int i = 0; i < n; i++)
+    {
+        char ch = oct[i];
+        if (ch < '0' || ch > '7') return false;
+    }
     return true;
 }
 
