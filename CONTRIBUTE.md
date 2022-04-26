@@ -48,6 +48,4 @@ responsible for compiling and running the TEST cases file.
 To report new bugs or suggest new features, you are more than welcome to open an issue for discussion for the owner to see before
 sending a pull request. Once I think this plan looks good, go ahead and implement. To contribute to existing issues, simply comment under each issue and wait for the owners to assign you the issue before making your changes.
 
-When making any contributions, please fork this repository, clone it onto your machine to make your desired changes, and make a pull request. Your PR will be evaluated by the owner to decide on merging your changes.
-
-### Workflow to Evaluate Pull Requests
+When making any contributions, please fork this repository, clone it onto your machine to make your desired changes, and make a pull request. Your PR will be evaluated by the owner to decide on merging your changes. Your pull request will be evaluated on syntax based on our coding standards, efficiency, functionality, and cleanliness of your code.
