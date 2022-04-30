@@ -13,8 +13,24 @@ using namespace std;
 #include "functions.h"
 #include "accessories.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#include <fcntl.h>
+#endif
+
 int main()
 {
+
+    #ifdef _WIN32
+    // Attempt to enable ANSI Escape Sequence on Windows
+    HANDLE hStdIn;
+    DWORD mode;
+    hStdIn = GetStdHandle(STD_OUTPUT_HANDLE);
+    GetConsoleMode(hStdIn, &mode);
+    mode |= 0x0004;
+    SetConsoleMode(hStdIn, mode);
+	#endif
+
     cout << ANSI_BOLD << ANSI_UNDERLINE << ANSI_GREEN << "WELCOME TO THE DATA CONVERTER" << ANSI_RESET << endl;
     cout << ANSI_BOLD << ANSI_GREEN  << "--------------------------------" << ANSI_RESET << endl;
 
@@ -109,7 +125,12 @@ int main()
 
         cout << "Do you want to continue this program? (y/n) ";
         cin >> continueProgram;
+        
+        #ifdef _WIN32
+        system("cls");
+        #else
         system("clear");
+        #endif
     }
 
     cout << "Have a great day!" << endl;
