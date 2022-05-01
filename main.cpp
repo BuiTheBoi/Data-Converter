@@ -13,10 +13,26 @@ using namespace std;
 #include "functions.h"
 #include "accessories.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#include <fcntl.h>
+#endif
+
 int main()
 {
-    cout << "WELCOME TO THE DATA CONVERTER" << endl;
-    cout << "--------------------------------" << endl;
+
+    #ifdef _WIN32
+    // Attempt to enable ANSI Escape Sequence on Windows
+    HANDLE hStdIn;
+    DWORD mode;
+    hStdIn = GetStdHandle(STD_OUTPUT_HANDLE);
+    GetConsoleMode(hStdIn, &mode);
+    mode |= 0x0004;
+    SetConsoleMode(hStdIn, mode);
+	#endif
+
+    cout << ANSI_BOLD << ANSI_UNDERLINE << ANSI_GREEN << "WELCOME TO THE DATA CONVERTER" << ANSI_RESET << endl;
+    cout << ANSI_BOLD << ANSI_GREEN  << "--------------------------------" << ANSI_RESET << endl;
 
     char continueProgram = 'Y';
 
@@ -24,11 +40,15 @@ int main()
     {
         // ================================ TAKING IN INPUT ================================
         int input_choice;
-        cout << "[1] Decimal (Base 10)\n[2] Binary (Base 2)\n[3] Octal (Base 8)\n[4] Hexadecimal (Base 16)\n";
-        cout << "Please pick your input type: ";
+        cout << ANSI_BRIGHT_WHITE << ANSI_BOLD << "[1]" << ANSI_RESET << " Decimal (Base 10)\n"
+             << ANSI_BRIGHT_WHITE << ANSI_BOLD << "[2]" << ANSI_RESET << " Binary (Base 2)\n"
+             << ANSI_BRIGHT_WHITE << ANSI_BOLD << "[3]" << ANSI_RESET << " Octal (Base 8)\n"
+             << ANSI_BRIGHT_WHITE << ANSI_BOLD << "[4]" << ANSI_RESET << " Hexadecimal (Base 16)\n";
+        cout << "Please pick your input type: " << ANSI_BOLD << ANSI_BRIGHT_GREEN << ANSI_HIGHLIGHT_DULL_GREEN;
 
         cin >> input_choice;
         cin.ignore();
+        cout << ANSI_RESET;
 
         string base_str;
         int decimal;
@@ -44,15 +64,18 @@ int main()
             // Any base to decimal
             if (input_choice == 2)
             {
-                cout << "Input a binary string: ";
+                cout << "Input a binary string: "
+                     << ANSI_BOLD << ANSI_BRIGHT_GREEN << ANSI_HIGHLIGHT_DULL_GREEN;
             }
             else if (input_choice == 3)
             {
-                cout << "Input an octal string: ";
+                cout << "Input an octal string: "
+                     << ANSI_BOLD << ANSI_BRIGHT_GREEN << ANSI_HIGHLIGHT_DULL_GREEN;
             }
             else // if input_choice == 4
             {
-                cout << "Input a hexadecimal string: ";
+                cout << "Input a hexadecimal string: "
+                     << ANSI_BOLD << ANSI_BRIGHT_GREEN << ANSI_HIGHLIGHT_DULL_GREEN;
             }
             getline(cin, base_str);
         }
@@ -64,8 +87,10 @@ int main()
         // ================================ TAKING IN OUTPUT ================================
         int output_choice;
         
-        cout << "Please pick what output type you want to convert your input to: ";
+        cout << "Please pick what output type you want to convert your input to: " 
+             << ANSI_BOLD << ANSI_BRIGHT_GREEN << ANSI_HIGHLIGHT_DULL_GREEN;
         cin >> output_choice;
+        cout << ANSI_RESET;
 
         cout << "Base " << my_dictionary[input_choice] << " converted to base " << my_dictionary[output_choice] << ": ";
         if (input_choice == output_choice)
@@ -100,7 +125,12 @@ int main()
 
         cout << "Do you want to continue this program? (y/n) ";
         cin >> continueProgram;
+        
+        #ifdef _WIN32
+        system("cls");
+        #else
         system("clear");
+        #endif
     }
 
     cout << "Have a great day!" << endl;
