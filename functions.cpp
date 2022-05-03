@@ -6,7 +6,21 @@ using namespace std;
 
 string convertAllCaps(string val)
 {
-    return "string";
+    int n=val.length();
+    string caps;
+    for(int i = 0; i < n; i++)
+    {
+        char ch = val[i];
+        if ((ch > 'a' && ch <'z'))
+        {
+            caps += toupper(ch);
+        }
+        else
+        {
+            caps += ch;
+        }
+    } 
+    return caps;
 }
 
 bool isHex(string hex)
