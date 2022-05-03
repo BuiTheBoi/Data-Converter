@@ -47,6 +47,8 @@ responsible for compiling and running the TEST cases file.
 ## Resolving Bugs and Suggesting New Features
 
 To report new bugs or suggest new features, you are more than welcome to open an issue for discussion for the owner to see before
-sending a pull request. Once I think this plan looks good, go ahead and implement. To contribute to existing issues, simply comment under each issue and wait for the owners to assign you the issue before making your changes.
+sending a pull request. Once I think this plan looks good, go ahead and implement. To contribute to existing issues, simply comment under each issue and wait for the owners to assign you the issue before making your changes.For any of your contributions, please fork this repository, clone it onto your machine to make your desired changes, and make a pull request.
 
-When making any contributions, please fork this repository, clone it onto your machine to make your desired changes, and make a pull request. Your PR will be evaluated by the owner to decide on merging your changes. You will be evaluated on syntax based on our coding standards, efficiency, functionality, and cleanliness of your code.
+## Pull Request Evaluations
+
+Your PR must be evaluated by the owner first before your changes can be merged. You will be evaluated on syntax based the above coding standards. I will also take into account efficiency, functionality, and cleanliness of your code.
