@@ -4,9 +4,9 @@
 
 Before you contribute to this repository, please consider these following coding standards:
 
-### Variable and functions:
+### Variables and functions:
 
-- Variable and function names are to be done in **camel case** (Test case functions I've made are an exception as those names are all caps)
+- Variable and function names are to be done in **camel case**. Test case functions I've made are an exception as those names are all caps.
 - Variables and functions must be sensibly named relative to their purpose. Any long pieces of code can be split into functions for ease of reading
 - Functions used by the main program must have their prototypes in `functions.h`. On top of each prototype, functions must have a brief description done by comments. Function definitions are to be done in `functions.cpp`.
 - If you plan to have any major/global variables, please initialize/declare them in `accessories.h`.
@@ -36,6 +36,7 @@ else if (i == 1) {
 ```
 
 - Best to use `nullptr` instead of `NULL` when dealing with pointers.
+- Be sure to comment your code to make it clear for other viewers too!
 
 ## How to Run/Test Repo
 
@@ -48,4 +49,4 @@ responsible for compiling and running the TEST cases file.
 To report new bugs or suggest new features, you are more than welcome to open an issue for discussion for the owner to see before
 sending a pull request. Once I think this plan looks good, go ahead and implement. To contribute to existing issues, simply comment under each issue and wait for the owners to assign you the issue before making your changes.
 
-When making any contributions, please fork this repository, clone it onto your machine to make your desired changes, and make a pull request. Your PR will be evaluated by the owner to decide on merging your changes. Your pull request will be evaluated on syntax based on our coding standards, efficiency, functionality, and cleanliness of your code.
+When making any contributions, please fork this repository, clone it onto your machine to make your desired changes, and make a pull request. Your PR will be evaluated by the owner to decide on merging your changes. You will be evaluated on syntax based on our coding standards, efficiency, functionality, and cleanliness of your code.
