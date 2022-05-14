@@ -29,11 +29,11 @@ bool isHex(string hex)
 {
     for(int i = 0; i < hex.length(); i++)
     {
-      if (hex.at(i) < 48 || (hex.at(i) > 57 && hex.at(i) < 65)
-          || (hex.at(i) > 70 && hex.at(i) < 97) || hex.at(i) > 102)
-      {
-        return false;
-      }
+        if (hex.at(i) < 48 || (hex.at(i) > 57 && hex.at(i) < 65)
+            || (hex.at(i) > 70 && hex.at(i) < 97) || hex.at(i) > 102)
+            {
+              return false;
+            }
     }
     return true;
 }
@@ -43,10 +43,10 @@ bool isBinary(string bin)
 {
     for(int i = 0; i < bin.length(); i++)
     {
-      if(bin.at(i) != '0' && bin.at(i) != '1')
-      {
-        return false;
-      }
+        if(bin.at(i) != '0' && bin.at(i) != '1')
+        {
+          return false;
+        }
     }
     return true;
 }
@@ -54,14 +54,14 @@ bool isBinary(string bin)
 // Iterates through the string until it finds a char that is not 0-7
 bool isOctal(string oct)
 {
-  for(int i = 0; i < oct.length(); i++)
-  {
-    if (oct.at(i) < 48 || oct.at(i) > 55)
+    for(int i = 0; i < oct.length(); i++)
     {
-      return false;
+      if (oct.at(i) < 48 || oct.at(i) > 55)
+      {
+        return false;
+      }
     }
-  }
-    return true;
+      return true;
 }
 
 int baseToDecimal(int base, string num)
