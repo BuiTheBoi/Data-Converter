@@ -19,23 +19,49 @@ string convertAllCaps(string val)
         {
             caps += ch;
         }
-    } 
+    }
     return caps;
 }
-
+/* Iterates through the string until it finds something which is not 0-9, or A-F
+    Note: In its current form, it allows lowercase too. To change this, just erase
+          the conditions after hex.at(i) > 70                                   */
 bool isHex(string hex)
 {
+    for(int i = 0; i < hex.length(); i++)
+    {
+        if (hex.at(i) < 48 || (hex.at(i) > 57 && hex.at(i) < 65)
+            || (hex.at(i) > 70 && hex.at(i) < 97) || hex.at(i) > 102)
+            {
+              return false;
+            }
+    }
     return true;
 }
 
+// Iterates through the string until it finds a char that is not 1 or 0
 bool isBinary(string bin)
 {
+    for(int i = 0; i < bin.length(); i++)
+    {
+        if(bin.at(i) != '0' && bin.at(i) != '1')
+        {
+          return false;
+        }
+    }
     return true;
 }
 
+// Iterates through the string until it finds a char that is not 0-7
 bool isOctal(string oct)
 {
-    return true;
+    for(int i = 0; i < oct.length(); i++)
+    {
+      if (oct.at(i) < 48 || oct.at(i) > 55)
+      {
+        return false;
+      }
+    }
+      return true;
 }
 
 int baseToDecimal(int base, string num)
